@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Header from './Header'
 import Post from './Post'
+import Button from './Button'
+import { ThemeProvider } from './ThemeContext'
 
 export default function App(){
   const [posts, setPosts] = useState([ 
@@ -24,11 +26,11 @@ export default function App(){
     )
   }
   return (
-    <>
-      <Header title="JStack's Blog">
+    <ThemeProvider>
+      <Header>
         <h2>
           Post da semana
-          <button onClick={handleRefresh}>Atualizar</button>
+          <Button onClick={handleRefresh}>Atualizar</Button>
         </h2>
       </Header> 
 
@@ -42,6 +44,6 @@ export default function App(){
         />
       ))}
 
-    </>
+    </ThemeProvider>
   )
 }
