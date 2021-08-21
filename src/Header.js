@@ -5,13 +5,17 @@ import { ThemeContext } from './ThemeContext'
 export default function Header (props) {
   const { onToggleTheme } = React.useContext(ThemeContext)
   return(
-    <>
+    <div
+      style={{
+        background:'#ccc'
+      }}
+      >
       <h1>{props.title}</h1>
       <Button onClick={onToggleTheme}>
         Mudar Tema
       </Button>
       {props.children}
-    </>
+    </div>
   )
 }
 

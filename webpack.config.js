@@ -13,7 +13,7 @@ module.exports = {
     new HtmlWebpeckPlugin({
       template: path.resolve(__dirname,'public','index.html')
     }),
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
   ],
   module: {
     rules: [

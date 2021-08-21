@@ -4,7 +4,7 @@ import Button from './Button'
 
 export default function PostHeader(props){
   return(
-    <>
+    <React.Fragment>
       <strong>
         {
           props.post.read ? 
@@ -15,7 +15,7 @@ export default function PostHeader(props){
       <Button onClick={() => props.onRemove(props.post.id)}>
         Remover
       </Button>
-    </>
+    </React.Fragment>
   );
 }
 
