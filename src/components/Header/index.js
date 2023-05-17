@@ -1,16 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from './Button'
-import { ThemeContext } from './ThemeContext'
+import Button from '../Button'
+import { ThemeContext } from '../../context/ThemeContext'
+import Title from '../Title'
+
 export default function Header (props) {
   const { onToggleTheme } = React.useContext(ThemeContext)
   return(
-    <div
-      style={{
-        background:'#ccc'
-      }}
-      >
-      <h1>{props.title}</h1>
+    <div>
+      <Title>{props.title}</Title>
       <Button onClick={onToggleTheme}>
         Mudar Tema
       </Button>
